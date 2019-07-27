@@ -1,0 +1,1077 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+.nav{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+    background-color:#000;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.nav a{
+    text-decoration:none;
+    color:#fff;
+    font-size:10px;
+    
+}
+.nav-left{
+/* width:400px; */
+padding-left:100px;
+}
+.nav-right{
+/* width:600px; */
+padding-right:100px;
+}
+.nav-left a:first-child{
+  margin-right:10px;
+
+}
+.nav-left a:nth-child(2){
+    margin-right:10px;
+}
+.nav-right a{
+    margin-right:10px;
+}
+.logo-sousuo{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: flex-start;
+}
+.logo-sousuo .du-logo{
+    width:150px;
+    height:50px;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+
+}
+.logo-sousuo .sousuo{
+    width:350px; 
+     height:30px;
+    margin-top:10px;
+    margin-left:250px;
+    padding-left:5px;
+    border:0;
+    border:2px solid #000;
+  
+}
+.logo-sousuo .sousuo :focus{}
+.sousuo2{
+    margin-top:10px;
+    color:#fff;
+    text-decoration: none;
+    display:inline-block;
+    text-align:center;
+    line-height:30px;
+    width:100px;
+    height:30px;
+    background:#000;
+}
+.content{
+    position:relative;
+    top:0px;
+    left:0px;
+    border:2px solid #000;
+    height:1000px;
+}
+.top-content{
+    margin-left:400px;
+    margin-top:40px;
+}
+.top-content a{
+    text-decoration:none;
+    color:#000;
+    font-size:20px;
+    margin-right:20px;
+}
+.lunbo{
+    width:100%;
+    height:500px;
+}
+/* -----------------------------轮播图左边的分类块---------------------------------- */
+.category-tab-content{
+    position:absolute;
+    top:0px;
+    left:150px;
+    width:100px;
+    height:500px;
+    background-color:rgba(184, 189, 190, 0.35);
+}
+
+.category-tab-content>ul>li{
+    margin-bottom:20px;
+    text-align:center;
+}
+.category-tab-content ul li a{
+    text-decoration:none;
+    color:#fff;
+    font-weight:bold;
+}
+/* 分类块的悬停效果 */
+/* 第一块 */
+.category-tab-content ul li:nth-child(1):hover{
+   background-color:#fff;
+   
+}
+.category-tab-content ul li:nth-child(1):hover a{
+   color:#000;
+ }
+/*  定义当鼠标悬停在分来块上时会出现的空白区域*/
+
+
+/* 第一块的详细内容 */
+.pinpai{
+    position:absolute;
+    top:0px;
+    left:100px;
+    width:600px;
+    height:500px;
+    background-color:#fff;
+    opacity: 0.99;
+    visibility: hidden;
+  
+    color:#fff;
+}
+/* 当鼠标悬停在第一块上时，后面出现的详细内容 */
+.category-tab-content ul li:nth-child(1):hover .pinpai{
+     visibility: visible; 
+   
+}
+/* 列表去点 */
+.pinpai ul li{
+    list-style-type: none;
+}
+/* 第一块详细内容里面的图片 */
+.pinpai ul li a img{
+    width:100px;
+    height:100px;
+}
+
+/* ==========================================第二块===================================== */
+.category-tab-content ul li:nth-child(2):hover{
+    background-color:#fff;
+    
+ }
+ .category-tab-content ul li:nth-child(2):hover a{
+    color:#000;
+  }
+  /* 第二块的详细内容 */
+.xilie{
+    position:absolute;
+    top:0px;
+    left:100px;
+    width:600px;
+    height:500px;
+    background-color:#fff;
+    opacity: 0.99;
+    visibility: hidden;
+    color:#fff;
+}
+/* 当鼠标悬停在第一块上时，后面出现的详细内容 */
+.category-tab-content ul li:nth-child(2):hover .xilie{
+    visibility: visible;
+}
+/* 列表去点 */
+.xilie ul li{
+    list-style-type: none;
+}
+/* 第二块详细内容里面的左侧文字 */
+.xilie .left{
+    /* position:absolute;
+    top:0px;
+    left:0px; */
+    float:left;
+}
+
+.category-tab-content .xilie .left li{
+    font-size:12px;
+    font-weight:bold;
+    color:#000;
+    margin-bottom:40px;
+    margin-left:10px;
+    text-align:left;
+}
+.xilie .left li:first-child{
+    margin-top:30px;
+}
+/* 第二块第1小块详细内容里面的右侧文字 */
+.xilie .right1{
+    margin-top:15px;
+    border-bottom:1px dashed #e8e8e8;
+}
+.category-tab-content .xilie .right1 a{
+    font-size:6px;
+    margin-right:5px;
+}
+.category-tab-content .xilie .right1 a:nth-child(even){
+    color:#f00;
+}
+/* 第二块第2小块详细内容里面的右侧文字 */
+.xilie .right2{
+    margin-top:5px;
+    border-bottom:1px dashed #e8e8e8;
+}
+.category-tab-content .xilie .right2 a{
+    font-size:6px;
+    margin-right:5px;
+}
+.category-tab-content .xilie .right2 a:nth-child(even){
+    color:#f00;
+}
+/* 第二块第3块详细内容里面的右侧文字 */
+.xilie .right3{
+    margin-top:5px;
+    border-bottom:1px dashed #e8e8e8;
+}
+.category-tab-content .xilie .right3 a{
+    font-size:6px;
+    margin-right:5px;
+}
+.category-tab-content .xilie .right3 a:nth-child(even){
+    color:#f00;
+}
+/* 第二块第4小详细内容里面的右侧文字 */
+.xilie .right4{
+    margin-top:15px;
+    border-bottom:1px dashed #e8e8e8;
+}
+.category-tab-content .xilie .right4 a{
+    font-size:6px;
+    margin-right:5px;
+}
+.category-tab-content .xilie .right4 a:nth-child(even){
+    color:#f00;
+}
+/* 第二块第5小块详细内容里面的右侧文字 */
+.xilie .right5{
+    margin-top:20px;
+    border-bottom:1px dashed #e8e8e8;
+}
+.category-tab-content .xilie .right5 a{
+    font-size:6px;
+    margin-right:5px;
+}
+.category-tab-content .xilie .right5 a:nth-child(even){
+    color:#f00;
+}
+/* 第二块第6小块详细内容里面的右侧文字 */
+.xilie .right6{
+    margin-top:20px;
+    border-bottom:1px dashed #e8e8e8;
+}
+.category-tab-content .xilie .right6 a{
+    font-size:6px;
+    margin-right:5px;
+}
+.category-tab-content .xilie .right6 a:nth-child(even){
+    color:#f00;
+}
+/* 第二块第7小块详细内容里面的右侧文字 */
+.xilie .right7{
+    margin-top:20px;
+    border-bottom:1px dashed #e8e8e8;
+}
+.category-tab-content .xilie .right7 a{
+    font-size:6px;
+    margin-right:5px;
+}
+.category-tab-content .xilie .right7 a:nth-child(even){
+    color:#f00;
+}
+
+ /* =================================第三块==================================== */
+ .category-tab-content ul li:nth-child(3):hover{
+    background-color:#fff;
+    
+ }
+ .category-tab-content ul li:nth-child(3):hover a{
+    color:#000;
+  }
+   /* 第三块的详细内容 */
+.xiuxian{
+    position:absolute;
+    top:0px;
+    left:100px;
+    width:600px;
+    height:500px;
+    background-color:#fff;
+    opacity: 0.99;
+    visibility: hidden;
+    color:#fff;
+}
+/* 当鼠标悬停在第三块上时，后面出现的详细内容 */
+.category-tab-content ul li:nth-child(3):hover .xiuxian{
+    visibility: visible;
+}
+/* 列表去点 */
+.xiuxian ul li{
+    list-style-type: none;
+}
+/* 第三块详细内容里面的左侧文字 */
+.xiuxian .left{
+    /* position:absolute;
+    top:0px;
+    left:0px; */
+    float:left;
+}
+.category-tab-content .xiuxian .left li{
+    font-size:12px;
+    font-weight:bold;
+    color:#000;
+    margin-bottom:40px;
+    margin-left:10px;
+    text-align:left;
+}
+.xiuxian .left li:first-child{
+    margin-top:30px;
+}
+/* 第三块第1小块详细内容里面的右侧文字 */
+.xiuxian .right1{
+    margin-top:30px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+    
+}
+.category-tab-content .xiuxian .right1 a:first-child{
+  margin-left:20px;
+}
+.category-tab-content .xiuxian .right1 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .xiuxian .right1 a:nth-child(even){
+    color:#f00;
+}
+/* 第三块第2小块详细内容里面的右侧文字 */
+.xiuxian .right2{
+    margin-top:35px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+}
+.category-tab-content .xiuxian .right2 a:first-child{
+    margin-left:20px;
+  }
+.category-tab-content .xiuxian .right2 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .xiuxian .right2 a:nth-child(even){
+    color:#f00;
+}
+/* 第三块第3小块详细内容里面的右侧文字 */
+.xiuxian .right3{
+    margin-top:35px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+}
+.category-tab-content .xiuxian .right3 a:first-child{
+    margin-left:20px;
+  }
+.category-tab-content .xiuxian .right3 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .xiuxian .right3 a:nth-child(even){
+    color:#f00;
+}
+/* 第三块第4小块详细内容里面的右侧文字 */
+.xiuxian .right4{
+    margin-top:35px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+}
+.category-tab-content .xiuxian .right4 a:first-child{
+    margin-left:20px;
+  }
+.category-tab-content .xiuxian .right4 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .xiuxian .right4 a:nth-child(even){
+    color:#f00;
+}
+
+/* ============================第四块====================================== */
+ /* 第四块 */
+ .category-tab-content ul li:nth-child(4):hover{
+    background-color:#fff;
+    
+ }
+ .category-tab-content ul li:nth-child(4):hover a{
+    color:#000;
+  }
+   /* 第四块的详细内容 */
+.qiuxie{
+    position:absolute;
+    top:0px;
+    left:100px;
+    width:600px;
+    height:500px;
+    background-color:#fff;
+    opacity: 0.99;
+    visibility: hidden;
+    color:#fff;
+}
+/* 当鼠标悬停在第四块上时，后面出现的详细内容 */
+.category-tab-content ul li:nth-child(4):hover .qiuxie{
+    visibility: visible;
+}
+
+
+/* 列表去点 */
+.qiuxie ul li{
+    list-style-type: none;
+}
+/* 第四块详细内容里面的左侧文字 */
+.qiuxie .left{
+    /* position:absolute;
+    top:0px;
+    left:0px; */
+    float:left;
+}
+.category-tab-content .qiuxie .left li{
+    font-size:12px;
+    font-weight:bold;
+    color:#000;
+    margin-bottom:40px;
+    margin-left:10px;
+    text-align:left;
+}
+.qiuxie .left li:first-child{
+    margin-top:30px;
+}
+/* 第四块第1小块详细内容里面的右侧文字 */
+.qiuxie .right1{
+    margin-top:30px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+    
+}
+.category-tab-content .qiuxie .right1 a:first-child{
+  margin-left:20px;
+}
+.category-tab-content .qiuxie .right1 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .qiuxie .right1 a:nth-child(even){
+    color:#f00;
+}
+/* 第四块第2小块详细内容里面的右侧文字 */
+.qiuxie .right2{
+    margin-top:35px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+}
+.category-tab-content .qiuxie .right2 a:first-child{
+    margin-left:20px;
+  }
+.category-tab-content .qiuxie .right2 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .qiuxie .right2 a:nth-child(even){
+    color:#f00;
+}
+/* 第四块第3小块详细内容里面的右侧文字 */
+.qiuxie .right3{
+    margin-top:35px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+}
+.category-tab-content .qiuxie .right3 a:first-child{
+    margin-left:20px;
+  }
+.category-tab-content .qiuxie .right3 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .qiuxie .right3 a:nth-child(even){
+    color:#f00;
+}
+/* 第四块第4小块详细内容里面的右侧文字 */
+.qiuxie .right4{
+    margin-top:35px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+}
+.category-tab-content .qiuxie .right4 a:first-child{
+    margin-left:20px;
+  }
+.category-tab-content .qiuxie .right4 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .qiuxie .right4 a:nth-child(even){
+    color:#f00;
+}
+
+ /* =====================================第五块 =====================================*/
+ .category-tab-content ul li:nth-child(5):hover{
+    background-color:#fff;
+    
+ }
+ .category-tab-content ul li:nth-child(5):hover a{
+    color:#000;
+  }
+   /* 第五块的详细内容 */
+   .paoxie{
+    position:absolute;
+    top:0px;
+    left:100px;
+    width:600px;
+    height:500px;
+    background-color:#fff;
+    opacity: 0.99;
+    visibility: hidden;
+    color:#fff;
+}
+/* 当鼠标悬停在第五块上时，后面出现的详细内容 */
+.category-tab-content ul li:nth-child(5):hover .paoxie{
+    visibility: visible;
+}
+/* 列表去点 */
+.paoxie ul li{
+    list-style-type: none;
+}
+/* 第五块详细内容里面的左侧文字 */
+.paoxie .left{
+    /* position:absolute;
+    top:0px;
+    left:0px; */
+    float:left;
+}
+.category-tab-content .paoxie .left li{
+    font-size:12px;
+    font-weight:bold;
+    color:#000;
+    margin-bottom:40px;
+    margin-left:10px;
+    text-align:left;
+}
+.paoxie .left li:first-child{
+    margin-top:30px;
+}
+/* 第五块第1小块详细内容里面的右侧文字 */
+.paoxie .right1{
+    margin-top:30px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+    
+}
+.category-tab-content .paoxie .right1 a:first-child{
+  margin-left:20px;
+}
+.category-tab-content .paoxie .right1 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .paoxie .right1 a:nth-child(even){
+    color:#f00;
+}
+/* 第五块第2小块详细内容里面的右侧文字 */
+.paoxie .right2{
+    margin-top:35px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+}
+.category-tab-content .paoxie .right2 a:first-child{
+    margin-left:20px;
+  }
+.category-tab-content .paoxie .right2 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .paoxie .right2 a:nth-child(even){
+    color:#f00;
+}
+/* 第五块第3小块详细内容里面的右侧文字 */
+.paoxie .right3{
+    margin-top:35px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+}
+.category-tab-content .paoxie .right3 a:first-child{
+    margin-left:20px;
+  }
+.category-tab-content .paoxie .right3 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .paoxie .right3 a:nth-child(even){
+    color:#f00;
+}
+/* 第五块第4小块详细内容里面的右侧文字 */
+.paoxie .right4{
+    margin-top:35px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+}
+.category-tab-content .paoxie .right4 a:first-child{
+    margin-left:20px;
+  }
+.category-tab-content .paoxie .right4 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .paoxie .right4 a:nth-child(even){
+    color:#f00;
+}
+
+
+ /* =====================================第六块================================ */
+ .category-tab-content ul li:nth-child(6):hover{
+    background-color:#fff;
+    
+ }
+ .category-tab-content ul li:nth-child(6):hover a{
+    color:#000;
+  }
+  
+/* 第六块的详细内容 */
+     .chaoda{
+        position:absolute;
+        top:0px;
+        left:100px;
+        width:600px;
+        height:500px;
+        background-color:#fff;
+        opacity: 0.99;
+        visibility: hidden;
+        color:#fff;
+}
+    /* 当鼠标悬停在第六块上时，后面出现的详细内容 */
+.category-tab-content ul li:nth-child(6):hover .chaoda{
+        visibility: visible;
+}
+/* 列表去点 */
+.chaoda ul li{
+    list-style-type: none;
+}
+/* 第六块详细内容里面的左侧文字 */
+.chaoda .left{
+    /* position:absolute;
+    top:0px;
+    left:0px; */
+    float:left;
+}
+.category-tab-content .chaoda .left li{
+    font-size:12px;
+    font-weight:bold;
+    color:#000;
+    margin-bottom:40px;
+    margin-left:10px;
+    text-align:left;
+}
+.chaoda .left li:first-child{
+    margin-top:30px;
+}
+/* 第六块第1小块详细内容里面的右侧文字 */
+.chaoda .right1{
+    margin-top:30px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+    
+}
+.category-tab-content .chaoda .right1 a:first-child{
+  margin-left:20px;
+}
+.category-tab-content .chaoda .right1 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .chaoda .right1 a:nth-child(even){
+    color:#f00;
+}
+/* 第六块第2小块详细内容里面的右侧文字 */
+.chaoda .right2{
+    margin-top:35px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+}
+.category-tab-content .chaoda .right2 a:first-child{
+    margin-left:20px;
+  }
+.category-tab-content .chaoda .right2 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .chaoda .right2 a:nth-child(even){
+    color:#f00;
+}
+/* 第六块第3小块详细内容里面的右侧文字 */
+.chaoda .right3{
+    margin-top:35px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+}
+.category-tab-content .chaoda .right3 a:first-child{
+    margin-left:20px;
+  }
+.category-tab-content .chaoda .right3 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .chaoda .right3 a:nth-child(even){
+    color:#f00;
+}
+/* 第六块第4小块详细内容里面的右侧文字 */
+.chaoda .right4{
+    margin-top:35px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+}
+.category-tab-content .chaoda .right4 a:first-child{
+    margin-left:20px;
+  }
+.category-tab-content .chaoda .right4 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .chaoda .right4 a:nth-child(even){
+    color:#f00;
+}
+
+ /* =========================================第七块=============================== */
+ .category-tab-content ul li:nth-child(7):hover{
+    background-color:#fff;
+    
+ }
+ .category-tab-content ul li:nth-child(7):hover a{
+    color:#000;
+  }
+     /* 第七块的详细内容 */
+     .chaowan{
+        position:absolute;
+        top:0px;
+        left:100px;
+        width:600px;
+        height:500px;
+        background-color:#fff;
+        opacity: 0.99;
+        visibility: hidden;
+        color:#fff;
+    }
+    /* 当鼠标悬停在第七块上时，后面出现的详细内容 */
+    .category-tab-content ul li:nth-child(7):hover .chaowan{
+        visibility: visible;
+    }
+/* 列表去点 */
+.chaowan ul li{
+    list-style-type: none;
+}
+/* 第七块详细内容里面的左侧文字 */
+.chaowan .left{
+    /* position:absolute;
+    top:0px;
+    left:0px; */
+    float:left;
+}
+.category-tab-content .chaowan .left li{
+    font-size:12px;
+    font-weight:bold;
+    color:#000;
+    margin-bottom:40px;
+    margin-left:10px;
+    text-align:left;
+}
+.chaowan .left li:first-child{
+    margin-top:30px;
+}
+/* 第七块第1小块详细内容里面的右侧文字 */
+.chaowan .right1{
+    margin-top:30px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+    
+}
+.category-tab-content .chaowan .right1 a:first-child{
+  margin-left:20px;
+}
+.category-tab-content .chaowan .right1 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .chaowan .right1 a:nth-child(even){
+    color:#f00;
+}
+/* 第七块第2小块详细内容里面的右侧文字 */
+.chaowan .right2{
+    margin-top:35px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+}
+.category-tab-content .chaowan .right2 a:first-child{
+    margin-left:20px;
+  }
+.category-tab-content .chaowan .right2 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .chaowan .right2 a:nth-child(even){
+    color:#f00;
+}
+/* 第七块第3小块详细内容里面的右侧文字 */
+.chaowan .right3{
+    margin-top:35px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+}
+.category-tab-content .chaowan .right3 a:first-child{
+    margin-left:20px;
+  }
+.category-tab-content .chaowan .right3 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .chaowan .right3 a:nth-child(even){
+    color:#f00;
+}
+/* 第七块第4小块详细内容里面的右侧文字 */
+.chaowan .right4{
+    margin-top:35px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+}
+.category-tab-content .chaowan .right4 a:first-child{
+    margin-left:20px;
+  }
+.category-tab-content .chaowan .right4 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .chaowan .right4 a:nth-child(even){
+    color:#f00;
+}
+
+
+
+
+
+
+ /*========================================== 第八块=============================== */
+ .category-tab-content ul li:nth-child(8):hover{
+    background-color:#fff;
+    
+ }
+ .category-tab-content ul li:nth-child(8):hover a{
+    color:#000;
+  }
+      /* 第八块的详细内容 */
+      .shoubiao{
+        position:absolute;
+        top:0px;
+        left:100px;
+        width:600px;
+        height:500px;
+        background-color:#fff;
+        opacity: 0.99;
+        visibility: hidden;
+        color:#fff;
+    }
+    /* 当鼠标悬停在第八块上时，后面出现的详细内容 */
+    .category-tab-content ul li:nth-child(8):hover .shoubiao{
+        visibility: visible;
+    }
+/* 列表去点 */
+.shoubiao ul li{
+    list-style-type: none;
+}
+/* 第八块详细内容里面的左侧文字 */
+.shoubiao .left{
+    /* position:absolute;
+    top:0px;
+    left:0px; */
+    float:left;
+}
+.category-tab-content .shoubiao .left li{
+    font-size:12px;
+    font-weight:bold;
+    color:#000;
+    margin-bottom:40px;
+    margin-left:10px;
+    text-align:left;
+}
+.shoubiao .left li:first-child{
+    margin-top:30px;
+}
+/* 第八块第1小块详细内容里面的右侧文字 */
+.shoubiao .right1{
+    margin-top:30px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+    
+}
+.category-tab-content .shoubiao .right1 a:first-child{
+  margin-left:20px;
+}
+.category-tab-content .shoubiao .right1 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .shoubiao .right1 a:nth-child(even){
+    color:#f00;
+}
+/* 第八块第2小块详细内容里面的右侧文字 */
+.shoubiao .right2{
+    margin-top:35px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+}
+.category-tab-content .shoubiao .right2 a:first-child{
+    margin-left:20px;
+  }
+.category-tab-content .shoubiao .right2 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .shoubiao .right2 a:nth-child(even){
+    color:#f00;
+}
+/* 第八块第3小块详细内容里面的右侧文字 */
+.shoubiao .right3{
+    margin-top:35px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+}
+.category-tab-content .shoubiao .right3 a:first-child{
+    margin-left:20px;
+  }
+.category-tab-content .shoubiao .right3 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .shoubiao .right3 a:nth-child(even){
+    color:#f00;
+}
+/* 第八块第4小块详细内容里面的右侧文字 */
+.shoubiao .right4{
+    margin-top:35px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+}
+.category-tab-content .shoubiao .right4 a:first-child{
+    margin-left:20px;
+  }
+.category-tab-content .shoubiao .right4 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .shoubiao .right4 a:nth-child(even){
+    color:#f00;
+}
+
+ /* ===========================================第九块================================== */
+ .category-tab-content ul li:nth-child(9):hover{
+    background-color:#fff;
+    
+ }
+ .category-tab-content ul li:nth-child(9):hover a{
+    color:#000;
+  }
+       /* 第九块的详细内容 */
+       .shuma{
+        position:absolute;
+        top:0px;
+        left:100px;
+        width:600px;
+        height:500px;
+        background-color:#fff;
+        opacity: 0.99;
+        visibility: hidden;
+        color:#fff;
+    }
+    /* 当鼠标悬停在第九块上时，后面出现的详细内容 */
+    .category-tab-content ul li:nth-child(9):hover .shuma{
+        visibility: visible;
+    }
+/* 列表去点 */
+.shuma ul li{
+    list-style-type: none;
+}
+/* 第九块详细内容里面的左侧文字 */
+.shuma .left{
+    /* position:absolute;
+    top:0px;
+    left:0px; */
+    float:left;
+}
+.category-tab-content .shuma .left li{
+    font-size:12px;
+    font-weight:bold;
+    color:#000;
+    margin-bottom:40px;
+    margin-left:10px;
+    text-align:left;
+}
+.shuma .left li:first-child{
+    margin-top:30px;
+}
+/* 第九块第1小块详细内容里面的右侧文字 */
+.shuma .right1{
+    margin-top:30px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+    
+}
+.category-tab-content .shuma .right1 a:first-child{
+  margin-left:20px;
+}
+.category-tab-content .shuma .right1 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .shuma .right1 a:nth-child(even){
+    color:#f00;
+}
+/* 第九块第2小块详细内容里面的右侧文字 */
+.shuma .right2{
+    margin-top:35px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+}
+.category-tab-content .shuma .right2 a:first-child{
+    margin-left:20px;
+  }
+.category-tab-content .shuma .right2 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .shuma .right2 a:nth-child(even){
+    color:#f00;
+}
+/* 第九块第3小块详细内容里面的右侧文字 */
+.shuma .right3{
+    margin-top:35px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+}
+.category-tab-content .shuma .right3 a:first-child{
+    margin-left:20px;
+  }
+.category-tab-content .shuma .right3 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .shuma .right3 a:nth-child(even){
+    color:#f00;
+}
+/* 第九块第4小块详细内容里面的右侧文字 */
+.shuma .right4{
+    margin-top:35px;
+    border-bottom:1px dashed #e8e8e8;
+    text-align:left;
+}
+.category-tab-content .shuma .right4 a:first-child{
+    margin-left:20px;
+  }
+.category-tab-content .shuma .right4 a{
+    font-size:6px;
+    margin-right:10px;
+}
+.category-tab-content .shuma .right4 a:nth-child(even){
+    color:#f00;
+}

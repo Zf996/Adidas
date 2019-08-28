@@ -1,0 +1,619 @@
+*{margin:0;
+padding:0;
+
+box-sizing: border-box;}
+/* 轮播图 */
+.banner{
+    margin:0 auto;
+    width:1200px;
+    overflow:hidden;
+    position:relative;
+}
+#ul-imgs{
+    list-style:none;
+}
+#ul-imgs.transition{
+    transition:all .5s linear;
+}
+#ul-imgs>li{
+    float:left;
+    width:1200px;
+
+}
+#ul-imgs img{
+    width:1200px;
+    height:500px;
+}
+#ul-idxs{
+    list-style: none;
+    position:absolute;
+    width:120px;
+    height:20px;
+    border-radius: 9px;
+    top:470px;
+    left:550px;
+    background-color: rgba(27, 26, 26, 0.8)
+}
+#ul-idxs li{
+    float:left;
+    width:20px;
+    height:5px;
+    background-color:#eee;
+    border:1px solid #fff;
+  
+    cursor: pointer;
+    margin:7.5px 5px;
+    
+}
+#ul-idxs li:hover{
+background-color:rgba(27, 26, 26, 0.849); 
+}
+#ul-idxs li.active{
+    background-color: rgb(11, 235, 243);
+}
+.btn-left{
+    position: absolute;
+    top:150px;
+    left:20px;
+    cursor: pointer;
+}
+.btn-left>a{
+    display:inline-block;
+    width:42px;
+    height:76px;
+    font-size: 150px;
+    color:rgba(177, 182, 184, 0.527);
+}
+.btn-left>a:hover{
+    color:#000;
+}
+.btn-right{
+    position: absolute;
+    top:150px;
+    right:80px;
+    cursor: pointer;
+}
+.btn-right>a{
+    display:inline-block;
+    width:42px;
+    height:76px;
+    font-size: 150px;
+    color:rgba(177, 182, 184, 0.527);
+}
+.btn-right>a:hover{
+    color:#000;
+}
+/* 轮播图上面的-adidas的导航 */
+.adidas{
+    width:100%;
+    height:80px;
+    background-color:#000;
+    position: relative;
+    margin-bottom:10px;
+}
+/* 第一层adidas导航中的logo */
+.adi-logo{
+    position: absolute;
+    top:15px;
+    left:150px;
+}
+/*第一层adidas导航中的选择文字  */
+ul.adi-sel{
+    list-style-type:none;
+    float:left;
+    /* top:30px;
+    left:260px; */
+    margin-left:250px;
+    margin-top:30px;
+}
+ul.adi-sel>li{
+    float:left;
+}
+ul.adi-sel li a{
+    text-decoration: none;
+    color:#fff;
+    font-size:18px;
+    margin-right:20px;
+}
+
+/* adidas导航栏当鼠标悬停在<男子>上时出现的下拉菜单的效果 */
+/* 去点 */
+div.man ul>li{
+    list-style-type: none;
+}
+/* 去除下划线 */
+div.man ul>li a{
+    text-decoration: none;
+}
+/* 设置鼠标不悬停在"男子"上时设置属性隐藏 */
+div.man{
+    /* display: none;  */
+    background-color:#fff;
+    width:1500px;
+    height:0px;
+    position:absolute;
+    top:80px;
+    left:0px; 
+    z-index: 10;
+    overflow: hidden;
+    transition: all .5s linear;
+}
+/* 设置鼠标悬停在"男子"时出现的选择内容 */
+.adidas .adi-sel .adi-sel-one:hover+div.man{
+    display:block;
+    height:200px;
+} 
+/* 让下面的每个ul都定位-横向显示 */
+div.man ul.man-one {
+       position:absolute;
+       top:10px;
+       left:150px; 
+       width:100px;
+       height:200px;
+}
+div.man ul.man-two {
+    position:absolute;
+    top:10px;
+    left:400px; 
+    width:100px;
+    height:200px;
+}
+div.man ul.man-three {
+    position:absolute;
+    top:10px;
+    left:650px; 
+    width:100px;
+    height:200px;
+}
+div.man ul.man-four {
+    position:absolute;
+    top:10px;
+    left:910px; 
+    width:100px;
+    height:200px;
+}
+div.man ul>li:first-child{
+    margin-bottom:20px;
+}
+div.man ul>li:first-child a{
+    font-weight: bolder;
+    font-size:16px;
+    color:#000;
+    margin-bottom:20px;
+    
+}
+div.man ul li a{
+    font-size:12px;
+    color:#000;
+}
+/* =============================================== */
+/* adidas导航栏当鼠标悬停在<女子>上时出现的下拉菜单的效果 */
+/* 去点 */
+div.woman ul>li{
+    list-style-type: none;
+}
+/* 去除下划线 */
+div.woman ul>li a{
+    text-decoration: none;
+}
+/* 设置鼠标不悬停在"女子"上时设置属性隐藏 */
+div.woman{
+    /* display: none;  */
+    background-color:#fff;
+    width:1500px;
+    height:0px;
+    position:absolute;
+    top:80px;
+    left:0px; 
+    z-index: 10;
+    overflow: hidden;
+    transition: all .5s linear;
+}
+/* 设置鼠标悬停在"女子"时出现的选择内容 */
+.adidas .adi-sel .adi-sel-two:hover+div.woman{
+    display:block;
+    height:200px;
+} 
+/* 让下面的每个ul都定位-横向显示 */
+div.woman ul.woman-one {
+       position:absolute;
+       top:10px;
+       left:150px; 
+       width:100px;
+       height:200px;
+}
+div.woman ul.woman-two {
+    position:absolute;
+    top:10px;
+    left:400px; 
+    width:100px;
+    height:200px;
+}
+div.woman ul.woman-three {
+    position:absolute;
+    top:10px;
+    left:650px; 
+    width:100px;
+    height:200px;
+}
+div.woman ul.woman-four {
+    position:absolute;
+    top:10px;
+    left:910px; 
+    width:100px;
+    height:200px;
+}
+div.woman ul>li:first-child{
+    margin-bottom:20px;
+}
+div.woman ul>li:first-child a{
+    font-weight: bolder;
+    font-size:16px;
+    color:#000;
+    margin-bottom:20px;
+}
+div.woman ul li a{
+    font-size:12px;
+    color:#000;
+}
+/* ====================================================== */
+/* adidas导航栏当鼠标悬停在<儿童>上时出现的下拉菜单的效果 */
+/* 去点 */
+div.children ul>li{
+    list-style-type: none;
+}
+/* 去除下划线 */
+div.children ul>li a{
+    text-decoration: none;
+}
+/* 设置鼠标不悬停在"儿童"上时设置属性隐藏 */
+div.children{
+    /* display: none;  */
+    background-color:#fff;
+    width:1500px;
+    height:0px;
+    position:absolute;
+    top:80px;
+    left:0px; 
+    z-index: 10;
+    overflow: hidden;
+    transition: all .5s linear;
+}
+/* 设置鼠标悬停在"儿童"时出现的选择内容 */
+.adidas .adi-sel .adi-sel-three:hover+div.children{
+    display:block;
+    height:200px;
+} 
+/* 让下面的每个ul都定位-横向显示 */
+div.children ul.children-one {
+       position:absolute;
+       top:10px;
+       left:150px; 
+       width:100px;
+       height:200px;
+}
+div.children ul.children-two {
+    position:absolute;
+    top:10px;
+    left:400px; 
+    width:100px;
+    height:200px;
+}
+div.children ul.children-three {
+    position:absolute;
+    top:10px;
+    left:650px; 
+    width:100px;
+    height:200px;
+}
+div.children ul.children-four {
+    position:absolute;
+    top:10px;
+    left:910px; 
+    width:100px;
+    height:200px;
+}
+div.children ul>li:first-child{
+    margin-bottom:20px;
+}
+div.children ul>li:first-child a{
+    font-weight: bolder;
+    font-size:16px;
+    color:#000;
+    
+}
+div.children ul li a{
+    font-size:12px;
+    color:#000;
+}
+.content-first{
+    position:relative;
+    top:0px;
+    left:0px;
+}
+/* 导航栏右侧的搜索框 */
+.adidas .adi-sousuo{
+    position: absolute;
+    top:40px;
+    left:1100px;
+
+}
+.adidas .adi-sousuo input{
+    height:25px;
+    padding-left:40px;
+}
+.adidas .adi-sousuo img{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:31px;
+    height:31px;
+    
+}
+/* 导航栏右侧的搜索框上册的内容 */
+.adidas .adi-top-right ul{
+    position: absolute;
+    top:0px;
+    left:1000px;
+    list-style: none;
+}
+.adidas .adi-top-right ul>li{
+float:left;
+margin-left:40px;
+}
+.adidas .adi-top-right ul>li>a{
+font-size:6px;
+color:#eee;
+text-decoration: none;
+}
+/* 轮播图下面的内容 */
+div.first{
+    display: flex;
+    justify-content: center;
+}
+div.first ul{
+    list-style: none;
+    
+    margin-left:-20px;
+}
+div.first ul li{
+    float: left;
+    padding-top:10px;
+    padding-left:20px;
+    padding-bottom:0px;
+}
+div.first ul li a:not(:first-child){
+    display: block;
+    text-decoration: none;
+    color:#000;
+    padding-bottom:10px;
+}
+div.first ul li a:nth-child(2){
+    font-weight:bold;
+}
+div.first ul li a:nth-child(3){
+font-size:12px;
+text-decoration: underline;
+}
+/* 第二层的样式 */
+div.two{
+display: flex;
+flex-flow: direction nowrap;
+justify-content:space-around; 
+
+}
+
+div.two .two-left{
+    padding-left:80px;
+}
+/* 当鼠标悬停在元素上时会出现蓝色的边框 */
+div.two .two-left>div:hover{
+    border:1px solid #0ff;
+}
+div.two .two-left img{
+    padding:20px;
+    padding-bottom:0px;
+}
+div.two .two-left p{
+    margin-bottom: 10px;
+    margin-left:20px;
+}
+div.two .two-left p>a{
+    text-decoration: none;
+    font-size:20px;
+    font-weight: bold;
+    color:#000;
+}
+div.two .two-left>div>a:last-child{
+    margin-left:20px;
+    color:#000;
+}
+/* 右 */
+div.two .two-right{
+    padding-right:80px;
+}
+/* 当鼠标悬停在元素上时会出现蓝色的边框 */
+div.two .two-right>div:hover{
+    border:1px solid #0ff;
+}
+div.two .two-right img{
+    padding:20px;
+    padding-bottom:0px;
+}
+div.two .two-right p{
+    margin-bottom: 10px;
+    margin-left:20px;
+}
+div.two .two-right p>a{
+    text-decoration: none;
+    font-size:20px;
+    font-weight: bold;
+    color:#000;
+}
+div.two .two-right>div>a:last-child{
+    margin-left:20px;
+    color:#000;
+}
+/* 第三层样式 */
+div.three{
+    display: flex;
+    flex-flow: direction nowrap;
+    justify-content:space-around; 
+    }
+    div.three .three-left{
+        padding-left:80px;
+    }
+/* 当鼠标悬停在元素上时会出现蓝色的边框 */
+div.three .three-left>div:hover{
+    border:1px solid #0ff;
+}
+div.three .three-left img{
+        padding:20px;
+        padding-bottom:0px;
+    }
+div.three .three-left p{
+        margin-bottom: 10px;
+        margin-left:20px;
+    }
+div.three .three-left p>a{
+        text-decoration: none;
+        font-size:20px;
+        font-weight: bold;
+        color:#000;
+    }
+div.three .three-left>div>a:last-child{
+        margin-left:20px;
+        color:#000;
+    }
+/* 右 */
+div.three .three-right{
+     padding-right:80px;
+    }
+/* 当鼠标悬停在元素上时会出现蓝色的边框 */
+div.three .three-right>div:hover{
+    border:1px solid #0ff;
+}
+div.three .three-right img{
+        padding:20px;
+        padding-bottom:0px;
+    }
+div.three .three-right p{
+        margin-bottom: 10px;
+        margin-left:20px;
+    }
+div.three .three-right p>a{
+        text-decoration: none;
+        font-size:20px;
+        font-weight: bold;
+        color:#000;
+    }
+div.three .three-right>div>a:last-child{
+        margin-left:20px;
+        color:#000;
+    }
+/* 底部的轮播图片 ============================================*/
+.four .banner{
+    position: relative;
+    top:0px;
+    left:0px;
+    margin-top:30px;
+    width:1100px;
+    overflow: hidden;
+}
+.four .banner #uImgs{
+display: inline-flex;
+justify-content: space-around;
+transition: all .5s linear;
+}
+.four .banner #uImgs li{
+    list-style-type: none;
+    /* width:250px; */
+    padding:10px;
+    /* margin:0px 5px; */
+}
+.four .banner #uImgs li a img{
+    padding:10px;
+    width:250px;
+}
+.four .banner #uImgs li a:last-child{
+    color:#000;
+    font-size:8px;
+    text-decoration: none;
+    margin-left:15px;
+}
+/* 左边的箭头 */
+.four .banner div#btn-left{
+    
+    width:30px;
+    height:30px;
+    /* border:1px solid rgb(161, 158, 158); */
+    /* background-color:rgba(241, 232, 232, 0.945); */
+    text-align:center;
+    vertical-align: center;
+    position:absolute;
+    top:100px;
+    left:20px;    
+}
+.four .banner div#btn-left>a{
+    position: absolute;
+    top:-16px;
+    left:-2px;
+    font-size:40px;
+    color:#000;
+    font-weight: bold;
+    text-decoration: none;
+}
+/* 右边的箭头 */
+.four .banner div#btn-right{
+    
+    width:30px;
+    height:30px;
+    /* border:1px solid rgb(161, 158, 158); */
+    /* background-color:rgba(241, 232, 232, 0.945); */
+    text-align:center;
+    vertical-align: center;
+    position:absolute;
+    top:100px;
+    left:1020px;
+    
+}
+.four .banner div#btn-right>a{
+    position: absolute;
+    top:-16px;
+    left:0px;
+    font-size:40px;
+    color:#000;
+    font-weight: bold;
+    text-decoration: none;
+}
+/* 动图下面的小圆点指示图 */
+#list{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+#list li:first-child{
+    width:20px;
+    height:5px;
+    background-color: gray;
+    margin-right:10px;
+    cursor: pointer;
+}
+#list li:first-child:hover{
+    background-color:#000;
+}
+#list li:last-child{
+    width:20px;
+    height:5px;
+    background-color: gray;
+    cursor: pointer;
+}
+#list li:last-child:hover{
+    background-color:#000;
+}
+#list li:first-child.black{
+    background-color:#000;
+}
+#list li:last-child.black{
+    background-color:#000;
+}

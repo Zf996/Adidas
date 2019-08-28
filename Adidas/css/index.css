@@ -3,6 +3,40 @@
     padding:0px;
     box-sizing:border-box;
 }
+/* 当鼠标滑动到页面的某一个位置时会出现的搜索框 */
+div.top-sousuo{
+    width:100%;
+    height:50px;
+    position:fixed;
+    top:-50px;
+    left:0px; 
+    z-index:10000; 
+    background-color:#000 ;
+    overflow: hidden; 
+    transition: all .5s ease-out;
+    border:1px solid #0ff;
+}
+  .top-sousuo.show{
+    top:0px;
+}  
+
+.top-sousuo>img{
+    float:left;
+    margin-left: 100px;
+    width:80px;
+    height:50px;
+    
+}
+
+.top-sousuo>input{
+    float:left;
+     margin-top:10px;
+     margin-left:250px;
+width:350px;
+height:30px;
+
+
+}
 
 .nav{
     display:flex;
@@ -50,9 +84,9 @@ padding-right:100px;
 }
 .logo-sousuo .sousuo{
     width:350px; 
-     height:30px;
-    margin-top:10px;
-    margin-left:250px;
+    height:30px;
+    margin-top:20px;
+    margin-left:400px;
     padding-left:5px;
     border:0;
     border:2px solid #000;
@@ -60,7 +94,7 @@ padding-right:100px;
 }
 .logo-sousuo .sousuo :focus{}
 .sousuo2{
-    margin-top:10px;
+    margin-top:20px;
     color:#fff;
     text-decoration: none;
     display:inline-block;
@@ -79,7 +113,7 @@ padding-right:100px;
 }
 .top-content{
     margin-left:400px;
-    margin-top:40px;
+    margin-top:10px;
 }
 .top-content a{
     text-decoration:none;
@@ -87,9 +121,77 @@ padding-right:100px;
     font-size:20px;
     margin-right:20px;
 }
-.lunbo{
-    width:100%;
+.content{
+    background-color: rgba(8, 253, 253, 0.842);
+}
+/* 轮播图 */
+.banner{
+    margin:0 auto;
+    width:1423px;
+    overflow:hidden;
+    position:relative;
+}
+#ul-imgs{
+    list-style:none;
+}
+#ul-imgs.transition{
+    transition:all .5s linear;
+}
+#ul-imgs>li{
+    float:left;
+    width:1423px;
+
+}
+#ul-imgs img{
+    width:1423px;
     height:500px;
+}
+#ul-idxs{
+    list-style: none;
+    position:absolute;
+    width:100px;
+    margin:0 auto;
+    top:490px;
+    left:650px;
+    
+}
+#ul-idxs li{
+    float:left;
+    width:10px;
+    height:10px;
+    background-color:#fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin:0px 5px;
+    
+}
+#ul-idxs li.active{
+    background-color: rgb(11, 235, 243);
+}
+.btn-left{
+    position: absolute;
+    top:0px;
+    left:20px;
+    width:60px;
+    height:100%;
+    background-image:url(../images/arrow-left.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.btn-right{
+    position: absolute;
+    top:0px;
+    right:20px;
+    width:60px;
+    height:100%;
+    background-image:url(../images/arrow-right.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.btn-left:hover,.btn-right:hover{
+    background-size: 40px 70px;
 }
 /* -----------------------------轮播图左边的分类块---------------------------------- */
 .category-tab-content{
@@ -98,9 +200,12 @@ padding-right:100px;
     left:150px;
     width:100px;
     height:500px;
-    background-color:rgba(184, 189, 190, 0.35);
+    background-color:rgba(184, 189, 190, 0.8);
+    list-style: none;
 }
-
+.category-tab-content>ul{
+    list-style: none;
+}
 .category-tab-content>ul>li{
     margin-bottom:20px;
     text-align:center;
@@ -130,14 +235,15 @@ padding-right:100px;
     width:600px;
     height:500px;
     background-color:#fff;
-    opacity: 0.99;
-    visibility: hidden;
-  
+    opacity: 0;
+    visibility: hidden; 
     color:#fff;
+    transition: all .5s linear;
 }
 /* 当鼠标悬停在第一块上时，后面出现的详细内容 */
 .category-tab-content ul li:nth-child(1):hover .pinpai{
      visibility: visible; 
+     opacity: 1;
    
 }
 /* 列表去点 */
@@ -166,13 +272,15 @@ padding-right:100px;
     width:600px;
     height:500px;
     background-color:#fff;
-    opacity: 0.99;
+    opacity: 0;
     visibility: hidden;
     color:#fff;
+    transition: all .5s linear;
 }
 /* 当鼠标悬停在第一块上时，后面出现的详细内容 */
 .category-tab-content ul li:nth-child(2):hover .xilie{
     visibility: visible;
+    opacity: 1;
 }
 /* 列表去点 */
 .xilie ul li{
@@ -298,13 +406,15 @@ padding-right:100px;
     width:600px;
     height:500px;
     background-color:#fff;
-    opacity: 0.99;
+    opacity: 0;
     visibility: hidden;
     color:#fff;
+    transition: all .5s linear;
 }
 /* 当鼠标悬停在第三块上时，后面出现的详细内容 */
 .category-tab-content ul li:nth-child(3):hover .xiuxian{
     visibility: visible;
+    opacity: 1;
 }
 /* 列表去点 */
 .xiuxian ul li{
@@ -411,13 +521,15 @@ padding-right:100px;
     width:600px;
     height:500px;
     background-color:#fff;
-    opacity: 0.99;
+    opacity: 0;
     visibility: hidden;
     color:#fff;
+    transition: all .5s linear;
 }
 /* 当鼠标悬停在第四块上时，后面出现的详细内容 */
 .category-tab-content ul li:nth-child(4):hover .qiuxie{
     visibility: visible;
+    opacity: 1;
 }
 
 
@@ -525,13 +637,15 @@ padding-right:100px;
     width:600px;
     height:500px;
     background-color:#fff;
-    opacity: 0.99;
+    opacity: 0;
     visibility: hidden;
     color:#fff;
+    transition: all .5s linear;
 }
 /* 当鼠标悬停在第五块上时，后面出现的详细内容 */
 .category-tab-content ul li:nth-child(5):hover .paoxie{
     visibility: visible;
+    opacity: 1;
 }
 /* 列表去点 */
 .paoxie ul li{
@@ -639,13 +753,16 @@ padding-right:100px;
         width:600px;
         height:500px;
         background-color:#fff;
-        opacity: 0.99;
+        opacity: 0;
         visibility: hidden;
         color:#fff;
+        transition: all .5s linear;
+
 }
     /* 当鼠标悬停在第六块上时，后面出现的详细内容 */
 .category-tab-content ul li:nth-child(6):hover .chaoda{
         visibility: visible;
+        opacity: 1;
 }
 /* 列表去点 */
 .chaoda ul li{
@@ -751,13 +868,15 @@ padding-right:100px;
         width:600px;
         height:500px;
         background-color:#fff;
-        opacity: 0.99;
+        opacity: 0;
         visibility: hidden;
         color:#fff;
+        transition: all .5s linear;
     }
     /* 当鼠标悬停在第七块上时，后面出现的详细内容 */
     .category-tab-content ul li:nth-child(7):hover .chaowan{
         visibility: visible;
+        opacity: 1;
     }
 /* 列表去点 */
 .chaowan ul li{
@@ -868,13 +987,15 @@ padding-right:100px;
         width:600px;
         height:500px;
         background-color:#fff;
-        opacity: 0.99;
+        opacity: 0;
         visibility: hidden;
         color:#fff;
+        transition: all .5s linear;
     }
     /* 当鼠标悬停在第八块上时，后面出现的详细内容 */
     .category-tab-content ul li:nth-child(8):hover .shoubiao{
         visibility: visible;
+        opacity: 1;
     }
 /* 列表去点 */
 .shoubiao ul li{
@@ -980,13 +1101,15 @@ padding-right:100px;
         width:600px;
         height:500px;
         background-color:#fff;
-        opacity: 0.99;
+        opacity: 0;
         visibility: hidden;
         color:#fff;
+        transition: all .5s linear;
     }
     /* 当鼠标悬停在第九块上时，后面出现的详细内容 */
     .category-tab-content ul li:nth-child(9):hover .shuma{
         visibility: visible;
+        opacity: 1;
     }
 /* 列表去点 */
 .shuma ul li{
@@ -1075,3 +1198,460 @@ padding-right:100px;
 .category-tab-content .shuma .right4 a:nth-child(even){
     color:#f00;
 }
+/* 轮播图下面的第一层主体内容-adidas的导航 */
+.adidas{
+    width:100%;
+    height:80px;
+    background-color:#000;
+    position: relative;
+}
+/* 第一层adidas导航中的logo */
+.adi-logo{
+    position: absolute;
+    top:15px;
+    left:150px;
+}
+/*第一层adidas导航中的选择文字  */
+ul.adi-sel{
+    list-style-type:none;
+    float:left;
+    /* top:30px;
+    left:260px; */
+    margin-left:250px;
+    margin-top:30px;
+}
+ul.adi-sel>li{
+    float:left;
+}
+ul.adi-sel li a{
+    text-decoration: none;
+    color:#fff;
+    font-size:18px;
+    margin-right:20px;
+}
+
+/* adidas导航栏当鼠标悬停在<男子>上时出现的下拉菜单的效果 */
+/* 去点 */
+div.man ul>li{
+    list-style-type: none;
+}
+/* 去除下划线 */
+div.man ul>li a{
+    text-decoration: none;
+}
+/* 设置鼠标不悬停在"男子"上时设置属性隐藏 */
+div.man{
+    /* display: none;  */
+    background-color:#fff;
+    width:1500px;
+    height:0px;
+    position:absolute;
+    top:80px;
+    left:0px; 
+    z-index: 10;
+    overflow: hidden;
+    transition: all .5s linear;
+}
+/* 设置鼠标悬停在"男子"时出现的选择内容 */
+.adidas .adi-sel .adi-sel-one:hover+div.man{
+    display:block;
+    height:200px;
+} 
+/* 让下面的每个ul都定位-横向显示 */
+div.man ul.man-one {
+       position:absolute;
+       top:10px;
+       left:150px; 
+       width:100px;
+       height:200px;
+}
+div.man ul.man-two {
+    position:absolute;
+    top:10px;
+    left:400px; 
+    width:100px;
+    height:200px;
+}
+div.man ul.man-three {
+    position:absolute;
+    top:10px;
+    left:650px; 
+    width:100px;
+    height:200px;
+}
+div.man ul.man-four {
+    position:absolute;
+    top:10px;
+    left:910px; 
+    width:100px;
+    height:200px;
+}
+div.man ul>li:first-child{
+    margin-bottom:20px;
+}
+div.man ul>li:first-child a{
+    font-weight: bolder;
+    font-size:16px;
+    color:#000;
+    margin-bottom:20px;
+    
+}
+div.man ul li a{
+    font-size:12px;
+    color:#000;
+}
+/* =============================================== */
+/* adidas导航栏当鼠标悬停在<女子>上时出现的下拉菜单的效果 */
+/* 去点 */
+div.woman ul>li{
+    list-style-type: none;
+}
+/* 去除下划线 */
+div.woman ul>li a{
+    text-decoration: none;
+}
+/* 设置鼠标不悬停在"女子"上时设置属性隐藏 */
+div.woman{
+    /* display: none;  */
+    background-color:#fff;
+    width:1500px;
+    height:0px;
+    position:absolute;
+    top:80px;
+    left:0px; 
+    z-index: 10;
+    overflow: hidden;
+    transition: all .5s linear;
+}
+/* 设置鼠标悬停在"女子"时出现的选择内容 */
+.adidas .adi-sel .adi-sel-two:hover+div.woman{
+    display:block;
+    height:200px;
+} 
+/* 让下面的每个ul都定位-横向显示 */
+div.woman ul.woman-one {
+       position:absolute;
+       top:10px;
+       left:150px; 
+       width:100px;
+       height:200px;
+}
+div.woman ul.woman-two {
+    position:absolute;
+    top:10px;
+    left:400px; 
+    width:100px;
+    height:200px;
+}
+div.woman ul.woman-three {
+    position:absolute;
+    top:10px;
+    left:650px; 
+    width:100px;
+    height:200px;
+}
+div.woman ul.woman-four {
+    position:absolute;
+    top:10px;
+    left:910px; 
+    width:100px;
+    height:200px;
+}
+div.woman ul>li:first-child{
+    margin-bottom:20px;
+}
+div.woman ul>li:first-child a{
+    font-weight: bolder;
+    font-size:16px;
+    color:#000;
+    margin-bottom:20px;
+}
+div.woman ul li a{
+    font-size:12px;
+    color:#000;
+}
+/* ====================================================== */
+/* adidas导航栏当鼠标悬停在<儿童>上时出现的下拉菜单的效果 */
+/* 去点 */
+div.children ul>li{
+    list-style-type: none;
+}
+/* 去除下划线 */
+div.children ul>li a{
+    text-decoration: none;
+}
+/* 设置鼠标不悬停在"儿童"上时设置属性隐藏 */
+div.children{
+    /* display: none;  */
+    background-color:#fff;
+    width:1500px;
+    height:0px;
+    position:absolute;
+    top:80px;
+    left:0px; 
+    z-index: 10;
+    overflow: hidden;
+    transition: all .5s linear;
+}
+/* 设置鼠标悬停在"儿童"时出现的选择内容 */
+.adidas .adi-sel .adi-sel-three:hover+div.children{
+    display:block;
+    height:200px;
+} 
+/* 让下面的每个ul都定位-横向显示 */
+div.children ul.children-one {
+       position:absolute;
+       top:10px;
+       left:150px; 
+       width:100px;
+       height:200px;
+}
+div.children ul.children-two {
+    position:absolute;
+    top:10px;
+    left:400px; 
+    width:100px;
+    height:200px;
+}
+div.children ul.children-three {
+    position:absolute;
+    top:10px;
+    left:650px; 
+    width:100px;
+    height:200px;
+}
+div.children ul.children-four {
+    position:absolute;
+    top:10px;
+    left:910px; 
+    width:100px;
+    height:200px;
+}
+div.children ul>li:first-child{
+    margin-bottom:20px;
+}
+div.children ul>li:first-child a{
+    font-weight: bolder;
+    font-size:16px;
+    color:#000;
+    
+}
+div.children ul li a{
+    font-size:12px;
+    color:#000;
+}
+.content-first{
+    position:relative;
+    top:0px;
+    left:0px;
+}
+/* 轮播图下面adidas的主体内容的第一张图片 */
+.content-first>.sumhpy{
+    width:100%;
+    height:500px;
+}
+/* 图片上的<立即选购>按钮 */
+.content-first .buy1{
+    position:absolute;
+    top:345px;
+    left:190px;
+    display:block; 
+    width:130px;
+    height:40px;
+    background-color:#000;
+    color:#fff;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    z-index: 1;
+
+}
+.content-first .buy1:hover{
+    color:rgb(180, 179, 179);
+}
+.content-first .buy2{
+    position:absolute;
+    top:347px;
+    left:192px;
+    display:block; 
+    width:130px;
+    height:40px;
+    background-color:rgba(80, 78, 78, 0.712);
+    border:1px solid #000;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+
+}
+.content-two{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:space-around;
+    display: relative;
+
+}
+.content-two img{
+    width:723px;
+    height:480px;
+    padding:20px;
+}
+/* 左侧图片的上的按钮 */
+.content-two .buy1{
+    position:absolute;
+    top:1475px;
+    left:265px;
+    display:block; 
+    width:130px;
+    height:40px;
+    background-color:#fff;
+    color:#000;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    z-index: 1;
+
+}
+.content-two .buy1:hover{
+    color:rgb(180, 179, 179);
+}
+.content-two .buy1-2{
+    position:absolute;
+    top:1477px;
+    left:267px;
+    display:block; 
+    width:130px;
+    height:40px;
+    background-color:rgba(250, 248, 248, 0);
+    /* opacity: 0; */
+    border:1px solid #fff;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+
+}
+/* 右边图片上的按钮 */
+.content-two .buy2{
+    position:absolute;
+    top:1475px;
+    left:997px;
+    display:block; 
+    width:130px;
+    height:40px;
+    background-color:#fff;
+    color:#000;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    z-index: 1;
+
+}
+.content-two .buy2:hover{
+    color:rgb(180, 179, 179);
+}
+.content-two .buy2-2{
+    position:absolute;
+    top:1477px;
+    left:999px;
+    display:block; 
+    width:130px;
+    height:40px;
+    background-color:rgba(250, 248, 248, 0);
+    /* opacity: 0; */
+    border:1px solid #fff;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+
+}
+/* adidas模块第三层div */
+div.four-shoes{
+    display:block;
+
+}
+.four-shoes>ul{
+    list-style: none;
+    
+}
+.four-shoes>ul>li{
+    float:left;
+    border:1px solid rgba(8, 253, 253, 0);
+    text-align:center;
+    margin-left:33px;
+    padding:20px;
+    transition:all .5s linear;
+}
+
+.four-shoes>ul>li:hover{
+    border:1px solid rgba(8, 253, 253, 1);
+}
+.four-shoes>ul>li>a{
+    display: block;
+    margin-bottom:20px;
+    
+}
+.four-shoes>ul>li>span>a{
+    color:#000;
+}
+/* 本月主推 */
+.pri-month{
+    overflow: hidden;
+    width:1000px;
+    position:relative;
+    top:0px;
+    left:230px;
+}
+.pri-month>p{
+    margin-left:100px;
+    width:500px;
+    font-size:22px;
+    font-weight: bold;
+}
+.pri-month>div.clear{
+    clear:both;
+}
+.pri-month>ul{
+    display: block;
+    list-style: none;
+    clear:both;
+    width:1750px;
+}
+.pri-month>ul>li{
+    float:left;
+}
+.pri-month>ul>li>img{
+    width:250px;
+    padding:20px;
+}
+.pri-month>ul>li>p{
+    font-size:12px;
+    margin-left:30px;
+}
+.pri-month>ul>li>div#btn-left>img{
+    width:40px;
+    height:40px;
+    /* background:rgb(8, 220, 248); */
+    position:absolute;
+    top:130px;
+    left:0px;
+    border-radius:5px;
+    cursor: pointer;
+}
+ .pri-month>ul>li>div#btn-left.disabled{
+    background:rgb(24, 3, 3);
+    
+} 
+.pri-month>ul>li>div#btn-right>img{
+    width:40px;
+    height:40px;
+    /* background:rgb(8, 220, 248); */
+    position:absolute;
+    top:130px;
+    right:0px;
+    border-radius:5px;
+    cursor: pointer;
+
+}
+.pri-month>ul>li>div#btn-right.disabled{
+    background:rgb(31, 16, 16);
+    
+} 
